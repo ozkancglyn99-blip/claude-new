@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Elif & Ali Düğün Davetiyesi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Marcellus&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ ZARF EKRANI ============ -->
+  <section id="envelope-screen" class="envelope-screen">
+    <div class="envelope-stage">
+
+      <div class="envelope">
+        <!-- 1. Zarfın en arkadaki tabanı -->
+        <img class="layer zarf-arka" src="zarf-arka.png" alt="">
+
+        <!-- 2. İçeriden çıkacak davetiye kartı -->
+        <img class="layer davetiye-karti" src="davetiye-karti.png" alt="Davetiye Kartı" id="davetiyeKarti">
+
+        <!-- 3. Zarfın ön cebi -->
+        <img class="layer zarf-on" src="zarf-on.png" alt="">
+
+        <!-- 4. Zarf kapağı (menteşeli açılacak) -->
+        <img class="layer zarf-kapak" src="zarf-kapak.png" alt="" id="zarfKapak">
+
+        <!-- 5. Mühür butonu -->
+        <button class="muhur-buton" id="muhurButon" aria-label="Davetiyeyi Aç">
+          <img src="muhur-buton.png" alt="Davetiyeyi Aç">
+        </button>
+      </div>
+
+      <p class="tap-hint">Açmak için mühüre dokunun</p>
+    </div>
+  </section>
+
+  <!-- ============ DAVETİYE İÇERİĞİ ============ -->
+  <main id="invitation" class="invitation" aria-hidden="true">
+
+    <section class="inv-hero">
+      <p class="inv-eyebrow">Evleniyoruz</p>
+      <h1 class="inv-names"><span>Elif</span><span class="amp">&amp;</span><span>Ali</span></h1>
+      <p class="inv-subtitle">Bu mutlu günümüzde siz değerli dostlarımızı ve<br>yakınlarımızı aramızda görmekten onur duyarız.</p>
+    </section>
+
+    <section class="inv-families">
+      <div class="family">
+        <span class="family-label">Gelin Ailesi</span>
+        <span class="family-name">Eylül Ailesi</span>
+      </div>
+      <div class="family-divider"></div>
+      <div class="family">
+        <span class="family-label">Damat Ailesi</span>
+        <span class="family-name">Candan Ailesi</span>
+      </div>
+    </section>
+
+    <section class="inv-details">
+      <div class="detail-item">
+        <span class="detail-icon">📅</span>
+        <div>
+          <span class="detail-label">Tarih &amp; Saat</span>
+          <span class="detail-value">12.12.2027 — Saat 19:00</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">📍</span>
+        <div>
+          <span class="detail-label">Mekan</span>
+          <span class="detail-value">Alemdar Kır Düğün Salonu</span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">🗺️</span>
+        <div>
+          <span class="detail-label">Adres</span>
+          <span class="detail-value">Arapzade Mah. Refik Atay Cad. / Arkaltı Sok. No:12, Orhangazi / Bursa</span>
+        </div>
+      </div>
+      <a class="map-button" href="https://www.google.com/maps/place/Alemdar+K%C4%B1r+D%C3%BC%C4%9F%C3%BCn+Salonu/@40.5056475,29.3072178,17z" target="_blank" rel="noopener">Harita &amp; Yol Tarifi</a>
+    </section>
+
+    <section class="inv-countdown">
+      <h2 class="section-title">Düğüne Kalan Süre</h2>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Gün</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Saat</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Dakika</span></div>
+        <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Saniye</span></div>
+      </div>
+    </section>
+
+    <section class="inv-rsvp">
+      <h2 class="section-title">Katılım Durumu (LCV)</h2>
+      <p class="section-sub">Lütfen düğünümüze katılım durumunuzu bildiriniz.</p>
+      <div class="rsvp-buttons">
+        <button class="rsvp-btn" data-choice="yes" id="rsvpYes">Katılıyorum</button>
+        <button class="rsvp-btn" data-choice="no" id="rsvpNo">Katılamıyorum</button>
+      </div>
+      <p class="rsvp-thanks" id="rsvpThanks"></p>
+    </section>
+
+    <section class="inv-program">
+      <h2 class="section-title">Program Akışı</h2>
+      <ol class="program-list">
+        <li>Gelin &amp; Damat Dansı</li>
+        <li>Devam Eden Aktivite</li>
+        <li>Takı Töreni</li>
+        <li>Pasta Kesimi</li>
+        <li>Fotoğraf Çekimi</li>
+        <li>After Party</li>
+      </ol>
+    </section>
+
+    <footer class="inv-footer">
+      <p>Elif &amp; Ali · 12.12.2027</p>
+    </footer>
+
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
